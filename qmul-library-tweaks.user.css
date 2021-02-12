@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Experimental QMUL Library Theme Tweaks
-@version        2021.2.12-7
+@version        2021.2.12-8
 @description    A theme experimenting with tweaks to the QMUL Library Search Interface. This theme is in pre-alpha state and is not suitable for general use.  The theme may periodically break things or hide functionality.  You have been warned!
 @author         Chris Sparks
 @namespace      chrissparks.co.uk
@@ -9,7 +9,7 @@
 @updateURL      https://github.com/sparkyc84/userstyles/raw/main/qmul-library-tweaks.user.css
 @license        CC-BY-NC-SA-4.0
 ==/UserStyle== */
-@-moz-document url-prefix("https://search.library.qmul.ac.uk/iii/encore/"){
+@-moz-document url-prefix("https://search.library.qmul.ac.uk/iii/encore/") {
   body {
     font-family: "Open Sans";
   }
@@ -17,9 +17,8 @@
     font-size: 2em;
     border-bottom: none !important;
     width: 100%;
-
   }
-  #leftColumn .sectionHeader.facetHeader::after{
+  #leftColumn .sectionHeader.facetHeader::after {
     content: " ";
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23393f49" class="bi bi-funnel-fill" viewBox="0 0 16 16">  <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/></svg>');
     background-size: 100%;
@@ -27,8 +26,8 @@
     width: 1.8rem;
     height: 1.8rem;
     position: relative;
-    top:.4rem;
-    left:0;
+    top: .4rem;
+    left: 0;
     background-color: white;
   }
   .facetGroupHeader {
@@ -171,7 +170,7 @@
 .searchText.customHeader {
   display: none;
 }
-.gridBrowseContent2{
+.gridBrowseContent2 {
   border-left: none;
   border-right: none;
 }
@@ -182,5 +181,47 @@
   box-shadow: none;
   border-left: none;
   border-right: none;
+}
+
+#customEncoreHeader .headDiv {
+  width: 11rem;
+  height: 4rem;
+}
+#customEncoreHeader .headDiv .header__logo {
+  width: 10rem;
+  height: 3rem;
+  margin:0;
+  padding:.5rem;
+}
+#customEncoreHeader .headDiv .header__logo::after {
+  content: "QMUL Library";
+  font-size: 1.2rem;
+  width: 10rem;
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left:0;
+  background: #0D3273;
+  height: 3rem;
+  line-height: 3rem;
+  padding: .5rem;
+}
+#customEncoreHeader{
+  position: sticky;
+  height: 4rem;
+}
+#customEncoreHeader .headDiv .header__logo img {
+  width: 100%;
+}
+#customEncoreHeader #secondary-menu{
+  position: absolute;
+  top:0;
+  left: 11rem;
+  height: 3rem;
+  padding: .5rem 0;
+  margin:0;
+  width: calc(100vw - 10rem);
+
 }
 }
