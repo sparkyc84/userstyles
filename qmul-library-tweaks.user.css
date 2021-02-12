@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Experimental QMUL Library Theme Tweaks
-@version        2021.2.12-5
+@version        2021.2.12-6
 @description    A theme experimenting with tweaks to the QMUL Library Search Interface. This theme is in pre-alpha state and is not suitable for general use.  The theme may periodically break things or hide functionality.  You have been warned!
 @author         Chris Sparks
 @namespace      chrissparks.co.uk
@@ -9,68 +9,90 @@
 @updateURL      https://github.com/sparkyc84/userstyles/raw/main/qmul-library-tweaks.user.css
 @license        CC-BY-NC-SA-4.0
 ==/UserStyle== */
-html {
+body {
     font-family: "Open Sans";
 }
-.sectionHeader.facetHeader {
+#leftColumn .sectionHeader.facetHeader {
     font-size: 2em;
     border-bottom: none !important;
+    width: 100%;
+
+}
+#leftColumn .sectionHeader.facetHeader::after{
+    content: " ";
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23393f49" class="bi bi-funnel-fill" viewBox="0 0 16 16">  <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/></svg>');
+    background-size: 100%;
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.8rem;
+    position: relative;
+    top:.4rem;
+    left:0;
+    background-color: white;
 }
 .facetGroupHeader {
     background: #0c746a;
     display: block;
     padding: .6rem;
     color: white !important;
-    font-size: 1.3em;
+    font-size: 1.2em;
+    font-weight: normal;
+    text-align: center;
 }
 .toggleImage {
     display: none;
 }
 #leftColumn {
     background: white;
-    margin:0 1em 0 0;
-    padding:0;
+    margin: 0 1em 0 0;
+    padding: 0;
 }
 .fieldsFacets a:hover {
     text-decoration: none;
 }
-#metafacetedslimittypeContents{
+#metafacetedslimittypeContents {
     border: none;
     margin-left: 1em;
 }
-.addtlActions p{
+.addtlActions p {
     display: none;
 }
-.itemsAvailable{
-    font-size: 1.3em;
+.itemsAvailable {
+    font-size: 1em;
     color: white !important;
     background: #7B0E72;
-    padding: .2em;
+    padding: .4em;
     margin: .3em .3em .3em 0;
     display: inline-block;
     border-radius: .2em;
 }
-.contentCategories{
+.contentCategories {
     display: none;
 }
-#contentColumn{
+#contentColumn {
     border: none !important;
 }
-.resultsSummary{
+.resultsSummary {
     border-top: none !important;
 }
-.searchTerm{
-    background: #cda70a;
-    color: white;
+.searchTerm {
     padding: .2em;
     border-radius: .2em;
-
 }
-.searchTerm::before{
+.searchTerm::before {
     content: "‘";
 }
-.searchTerm::after{
+.searchTerm::after {
     content: "’";
+}
+#GenericLink_0 {
+    background: white !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #0c746a !important;
+}
+#GenericLink_0 .button__text {
+    color: #0c746a !important
 }
 /*
 #mainContentArea::before{
@@ -82,22 +104,81 @@ html {
 }
 */
 #facetGroupAnyComponent,
-#facetGroupAnyComponent_0{
-  display: none;
+#facetGroupAnyComponent_0 {
+    display: none;
 }
-.breadcrumb.slat{
-  display: none;
+.breadcrumb.slat {
+    display: none;
 }
-#searchbox{
-  margin: 1em !important;
+#searchbox {
+    margin: 1em !important;
 }
-.resultsView{
-  display: none;
+.resultsView {
+    display: none;
 }
-.resultsSummary{
-  border: none;
-  padding-top: none !important;
+.resultsSummary {
+    border: none;
+    padding-top: 0 !important;
 }
-.searchText.customHeader{
-  display: none;
+
+#bannertop {
+    margin: .2rem !important;
+    padding: 0 !important;
+}
+
+#searchbox,
+#searchFormComponent,
+#searchString {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.searchContent {
+    width: calc(100% - 2em);
+    padding: 0 1rem;
+    height: 5em;
+}
+#searchString {
+    width: calc( 100% - .8em) !important;
+    height: 2em;
+    padding: .2em .4em !important;
+}
+#searchImageSumbitComponent {
+    position: relative;
+    top: -3.7rem;
+    left: calc( 100vw - 6em);
+    opacity: 0;
+    z-index: 2;
+}
+.searchSubmit {
+    position: absolute;
+}
+.searchSubmit::after {
+    background: white;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    content: " ";
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    top: -5.9rem;
+    left: calc( 100vw - 5.4em);
+    z-index: 0;
+}
+.searchText.customHeader {
+    display: none;
+}
+.gridBrowseContent2{
+    border-left: none;
+    border-right: none;
+}
+.gridBrowseContent2:hover,
+.gridBrowseContent2[focus-within],
+.search-result-item:hover,
+.search-result-item[focus-within] {
+    box-shadow: none;
+    border-left: none;
+    border-right: none;
 }
