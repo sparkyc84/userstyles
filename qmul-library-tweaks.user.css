@@ -266,4 +266,7 @@ background: #7b0e72;
                 margin: 0;
         padding:0;
     }
+    .ratingReviewsSummary{
+      display: none;
+    }
 }
