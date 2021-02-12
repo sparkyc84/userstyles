@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Experimental QMUL Library Theme Tweaks
-@version        2021.2.12-8
+@version        2021.2.12-9
 @description    A theme experimenting with tweaks to the QMUL Library Search Interface. This theme is in pre-alpha state and is not suitable for general use.  The theme may periodically break things or hide functionality.  You have been warned!
 @author         Chris Sparks
 @namespace      chrissparks.co.uk
@@ -119,6 +119,8 @@
     .resultsSummary {
         border: none;
         padding-top: 0 !important;
+        font-size: .7rem;
+        display: none;
     }
 
     #bannertop {
@@ -224,6 +226,9 @@
         width: calc(100vw - 10rem);
 
     }
+    .citationButtons, .search-result-item__buttons-group{
+        width: 5rem;
+    }
     .citationButtons .button.secondaryAction, .search-result-item__button{
     border: 1px solid #7b0e72;
         opacity: 1;
@@ -234,6 +239,7 @@ background: white;
         width: 100%;
         text-align: center;
         padding: .2rem;
+        font-size: .7rem;
     }
         .citationButtons .button.secondaryAction img{
             display: none;
@@ -249,5 +255,15 @@ background: #7b0e72;
     }
     #currentRefinementWrapper{
       background: white;
+    }
+    .gridBrowseCol2{
+        width: calc(100% - 5rem) !important;
+        margin: 0;
+        padding:0;
+    }
+    .gridBrowseCol1{
+        width: 5rem !important;
+                margin: 0;
+        padding:0;
     }
 }
