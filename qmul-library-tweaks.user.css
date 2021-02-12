@@ -1,7 +1,7 @@
 /* ==UserStyle==
-@name           QMUL Library Theme Tweaks
-@version        2021.2.12-1
-@description    A theme experimenting with tweaks to the QMUL Library Search Interface
+@name           Experimental QMUL Library Theme Tweaks
+@version        2021.2.12-2
+@description    A theme experimenting with tweaks to the QMUL Library Search Interface. This theme is in pre-alpha state and is not suitable for general use.  The theme may periodically break things or hide functionality.  You have been warned!
 @author         Chris Sparks
 @namespace      chrissparks.co.uk
 @homepageURL    https://github.com/sparkyc84/qmul-library-tweaks
@@ -78,4 +78,8 @@ html {
     display: block;
     padding: 1em;
     border-radius: .2em;
+}
+#facetGroupAnyComponent,
+#facetGroupAnyComponent_0{
+  display: none;
 }
