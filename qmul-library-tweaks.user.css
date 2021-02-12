@@ -1,0 +1,81 @@
+/* ==UserStyle==
+@name           QMUL Library Theme Tweaks
+@version        2021.2.12-1
+@description    A theme experimenting with tweaks to the QMUL Library Search Interface
+@author         Chris Sparks
+@namespace      chrissparks.co.uk
+@homepageURL    https://github.com/sparkyc84/qmul-library-tweaks
+@supportURL     https://github.com/sparkyc84/qmul-library-tweaks/issues
+@updateURL      https://raw.githubusercontent.com/sparkyc84/qmul-library-tweaks/master/qmul-library-tweaks.user.css
+@license        CC-BY-NC-SA-4.0
+==/UserStyle== */
+html {
+    font-family: "Open Sans";
+}
+.sectionHeader.facetHeader {
+    font-size: 2em;
+    border-bottom: none !important;
+}
+.facetGroupHeader {
+    background: #0c746a;
+    display: block;
+    padding: .6rem;
+    color: white !important;
+    font-size: 1.3em;
+}
+.toggleImage {
+    display: none;
+}
+#leftColumn {
+    background: white;
+    margin:0 1em 0 0;
+    padding:0;
+}
+.fieldsFacets a:hover {
+    text-decoration: none;
+}
+#metafacetedslimittypeContents{
+    border: none;
+    margin-left: 1em;
+}
+.addtlActions p{
+    display: none;
+}
+.itemsAvailable{
+    font-size: 1.5em;
+    color: white !important;
+    background: #7B0E72;
+    padding: .2em;
+    margin: .3em .3em .3em 0;
+    display: inline-block;
+    border-radius: .2em;
+}
+.contentCategories{
+    display: none;
+}
+#contentColumn{
+    border: none !important;
+}
+.resultsSummary{
+    border-top: none !important;
+}
+.searchTerm{
+    background: #cda70a;
+    color: white;
+    padding: .2em;
+    border-radius: .2em;
+
+}
+.searchTerm::before{
+    content: "‘";
+}
+.searchTerm::after{
+    content: "’";
+}
+#mainContentArea::before{
+    content:"Search results below may include both items held in the Library Catalogue (digitally or physically) and items held elsewhere or online.  Please use the ‘Refine By’ filters to show only the kinds of item you are interetested in, for example Availablility: Online.";
+    background: lightblue;
+    display: block;
+    padding: 1em;
+    border-radius: .2em;
+}
