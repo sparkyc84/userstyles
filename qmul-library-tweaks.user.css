@@ -98,3 +98,6 @@ html {
   border: none;
   padding-top: none !important;
 }
+.searchText.customHeader{
+  display: none;
+}
