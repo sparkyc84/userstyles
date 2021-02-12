@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Experimental QMUL Library Theme Tweaks
-@version        2021.2.12-4
+@version        2021.2.12-5
 @description    A theme experimenting with tweaks to the QMUL Library Search Interface. This theme is in pre-alpha state and is not suitable for general use.  The theme may periodically break things or hide functionality.  You have been warned!
 @author         Chris Sparks
 @namespace      chrissparks.co.uk
@@ -72,6 +72,7 @@ html {
 .searchTerm::after{
     content: "’";
 }
+/*
 #mainContentArea::before{
     content:"Search results below may include both items held in the Library Catalogue (digitally or physically) and items held elsewhere or online.  Please use the ‘Refine By’ filters to show only the kinds of item you are interetested in, for example Availablility: Online.";
     background: lightblue;
@@ -79,6 +80,7 @@ html {
     padding: 1em;
     border-radius: .2em;
 }
+*/
 #facetGroupAnyComponent,
 #facetGroupAnyComponent_0{
   display: none;
@@ -88,4 +90,11 @@ html {
 }
 #searchbox{
   margin: 1em !important;
+}
+.resultsView{
+  display: none;
+}
+.resultsSummary{
+  border: none;
+  padding-top: none !important;
 }
