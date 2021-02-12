@@ -247,4 +247,7 @@ background: #7b0e72;
         color: white !important;
         text-decoration: none;
     }
+    #currentRefinementWrapper{
+      background: white;
+    }
 }
