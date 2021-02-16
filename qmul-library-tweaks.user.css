@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Experimental QMUL Library Theme Tweaks
-@version        2021.2.16-1
+@version        2021.2.16-2
 @description    A theme experimenting with tweaks to the QMUL Library Search Interface. This theme is in pre-alpha state and is not suitable for general use.  The theme may periodically break things or hide functionality.  You have been warned!
 @author         Chris Sparks
 @namespace      chrissparks.co.uk
@@ -145,9 +145,11 @@
 }
 #searchImageSumbitComponent {
   position: relative;
-  top: -3.7rem;
-  left: calc( 100vw - 6em);
-  opacity: 0;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: -3.4rem;
+  right: .9rem;
   z-index: 2;
 }
 .searchSubmit {
